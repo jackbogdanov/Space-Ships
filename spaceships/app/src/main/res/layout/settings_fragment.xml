@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="how_to_play"
+        android:id="@+id/textHowToPlay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="about_us"
+        android:id="@+id/textAbout"
+        android:layout_marginBottom="120dp"
+        android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="team of dudes"
+        android:id="@+id/textTeamName"
+        android:layout_marginBottom="70dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/textAbout"
+        android:layout_alignStart="@+id/textAbout"/>
+
+    <com.cappable.spaceships.TouchHighlightImageButton
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:src="@mipmap/tutorial_1"
+        android:id="@+id/imageRight"
+        android:padding="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="100dp"
+        android:scaleType="centerCrop"/>
+
+
+    <com.cappable.spaceships.TouchHighlightImageButton
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:src="@mipmap/tutorial_1"
+        android:id="@+id/imageLeft"
+        android:padding="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_alignTop="@+id/imageRight"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/expanded_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"/>
+
+
+</RelativeLayout>

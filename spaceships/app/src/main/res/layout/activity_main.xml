@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context=".MainActivity">
+
+    <com.cappable.spaceships.GameBoard
+        android:id="@+id/gb"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <LinearLayout
+        android:id="@+id/layout_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btn_scores"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@mipmap/ic_score"
+            />
+        <Button
+            android:id="@+id/btn_shop"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@mipmap/ic_shop"/>
+        <Button
+            android:id="@+id/btn_sound"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@mipmap/ic_sound"/>
+        <Button
+            android:id="@+id/btn_settings"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@mipmap/ic_settings"/>
+    </LinearLayout>
+
+
+    <fragment
+        android:id="@+id/fragmentShop"
+        android:name="com.cappable.spaceships.ShopFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="88dp"
+        tools:layout="@layout/shop_fragment" />
+
+    <fragment
+        android:id="@+id/fragmentSettings"
+        android:name="com.cappable.spaceships.SettingsFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="88dp"
+        tools:layout="@layout/settings_fragment" />
+
+    <fragment
+        android:id="@+id/fragmentScore"
+        android:name="com.cappable.spaceships.ScoreFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="88dp"
+        tools:layout="@layout/score_fragment" />
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:text="деньжата"/>
+
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="0 m"/>
+
+    <TextView
+        android:id="@+id/tv_press_to_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:textSize="18sp"
+        android:text="Press somewhere to start"
+        />
+
+    <!-- view for AdMob Banner Ad -->
+    <com.google.android.gms.ads.AdView android:id="@+id/adView" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true" ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id" />
+
+</RelativeLayout>
